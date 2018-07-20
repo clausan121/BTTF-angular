@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {MoviedetailsService} from '../services/movies.service'
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
@@ -9,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
   }
+  constructor(
+    private myService: MoviedetailsService,
+    private myRouter: Router
+   ) { }
 
 }

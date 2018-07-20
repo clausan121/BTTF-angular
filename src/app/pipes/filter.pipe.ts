@@ -6,17 +6,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(products: any[], field: string, value: string): any [] {
-    if (!products) {
+    if (!movies) {
       return[];
     }
     if (!value) {
-      return products;
+      return movies;
     }
 
     const myPattern = new RegExp(value, 'i');
 
     // tslint:disable-next-line:no-shadowed-variable
-    return products.filter(products => products[field].match(myPattern));
+    return movies.filter(products => movies[field].match(myPattern));
   }
 
 }
