@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 
 
 @Injectable()
-export class MoviedetailsService {
+export class MovielistService {
   baseUrl: string = environment.apiUri;
 
   getAllTheMovies(): any {
@@ -17,12 +17,12 @@ export class MoviedetailsService {
   constructor(private myHttp: Http) { }
 
   getAllMovies() {
-    return this.myHttp.get(`${this.baseUrl}/product/products`)
+    return this.myHttp.get(`${this.baseUrl}/movie/movies`)
     .map((responseFromApi) => responseFromApi.json());
   }
 
   getOneMovie(theID: string) {
-    return this.myHttp.get(`${this.baseUrl}/product/products/${theID}`)
+    return this.myHttp.get(`${this.baseUrl}/movie/movies/${theID}`)
     .map((responseFromApi) => responseFromApi.json());
   }
 
@@ -30,10 +30,10 @@ export class MoviedetailsService {
  
 
 
-  // updateMovie(theID, theUpdates) {
-  //   return this.myHttp.post(`${this.baseUrl}/task/update/${theID}`, theUpdates)
-  //   .map((responseFromApi) => responseFromApi.json());
-  // }
+  updateMovie(theID, theUpdates) {
+    return this.myHttp.post(`${this.baseUrl}/task/update/${theID}`, theUpdates)
+    .map((responseFromApi) => responseFromApi.json());
+  }
 
 
 }
