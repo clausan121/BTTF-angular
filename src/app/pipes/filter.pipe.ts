@@ -5,18 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(products: any[], field: string, value: string): any [] {
-    if (!movies) {
-      return[];
-    }
-    if (!value) {
-      return movies;
-    }
-
-    const myPattern = new RegExp(value, 'i');
-
-    // tslint:disable-next-line:no-shadowed-variable
-    return movies.filter(products => movies[field].match(myPattern));
+  transform(value: any, args?: any): any {
+    return null;
   }
 
 }
