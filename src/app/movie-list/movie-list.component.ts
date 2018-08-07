@@ -13,7 +13,7 @@ export class MovieListComponent implements OnInit {
   pattern: any;
 
   constructor(
-    private myService: MovieListComponent,
+    private myService: MovielistService,
     private router: Router
   ) { }
 
