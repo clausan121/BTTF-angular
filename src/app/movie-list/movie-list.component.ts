@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { MoviedetailsService } from '../services/movies.service';
+import { MovielistService } from '../services/movies.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class MovieListComponent implements OnInit {
   pattern: any;
 
   constructor(
-    private myService: MoviedetailsService,
+    private myService: MovieListComponent,
     private router: Router
   ) { }
 

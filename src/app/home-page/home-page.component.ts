@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MoviedetailsService} from '../services/movies.service';
+import {MovielistService} from '../services/movies.service';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -8,7 +8,7 @@ import {MoviedetailsService} from '../services/movies.service';
 export class HomePageComponent implements OnInit {
 
   constructor(
-    private myService: MoviedetailsService,
+    private myService: MovielistService,
   ) { }
 
   ngOnInit() {

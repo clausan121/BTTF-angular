@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
-import {MoviedetailsService} from '../services/movies.service'
+import {MovielistService} from '../services/movies.service'
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
@@ -13,7 +13,7 @@ export class MovieDetailsComponent implements OnInit {
     throw new Error("Method not implemented.");
   }
   constructor(
-    private myService: MoviedetailsService,
+    private myService: MovielistService,
     private myRouter: Router
    ) { }
 
