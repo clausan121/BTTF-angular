@@ -58,7 +58,7 @@ baseUrl: string = environment.apiUri;
       .catch(this.handleError);
   }
 
-  cardInfo(dataToSend) {
+  commentInfo(dataToSend) {
     return this.http.post(`${this.baseUrl}/api/creditinfo`, dataToSend, { withCredentials: true })
     .map(res => {
       console.log('heyyyyy: ', res);
@@ -67,32 +67,32 @@ baseUrl: string = environment.apiUri;
     .catch(this.handleError);
   }
 
-  getTheCards() {
-    return this.http.get(`${this.baseUrl}/api/creditcards`, { withCredentials: true })
+  getTheComments() {
+    return this.http.get(`${this.baseUrl}/api/comments`, { withCredentials: true })
     .map(res => res.json())
     .catch(this.handleError);
   }
 
-  sendToShoppingCart(dataToSend) {
+  sendToComments(dataToSend) {
     console.log('whattt: ', dataToSend);
-    return this.http.post(`${this.baseUrl}/api/cart`, dataToSend, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/api/comments`, dataToSend, { withCredentials: true })
     .map(res => {
-      console.log('carttttt: ', res);
+      console.log('commentssss: ', res);
        res.json();
       })
     .catch(this.handleError);
   }
 
-  getTheCartContent(userId) {
-    return this.http.get(`${this.baseUrl}/api/user/${userId}/cart`, { withCredentials: true })
+  getTheCommentContent(userId) {
+    return this.http.get(`${this.baseUrl}/api/user/${userId}/comments`, { withCredentials: true })
     .map(res => res.json())
     .catch(this.handleError);
   }
-  removeFromShoppingCart(prodId) {
-    console.log('data to send: ', prodId.prodId);
+  removeComment(moviesId) {
+    console.log('data to send: ', moviesId.moviesId);
     return this.http.post(`${this.baseUrl}/api/cart/${prodId.prodId}/delete`, prodId, { withCredentials: true })
     .map(res => {
-      console.log('carttttt: ', res);
+      console.log('commentsssss: ', res);
        res.json();
       })
     .catch(this.handleError);
