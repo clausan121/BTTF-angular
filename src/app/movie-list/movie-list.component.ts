@@ -22,7 +22,7 @@ export class MovieListComponent implements OnInit {
   }
 
   getAllTheMovies() {
-    console.log('getting the products');
+    console.log('getting the movies');
     console.log(this.allTheMovies);
     this.myService.getAllMovies()
     .subscribe((theList) => {

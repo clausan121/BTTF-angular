@@ -1,0 +1,33 @@
+form, body { 
+  padding-top: 10%; 
+
+} 
+body {
+  font-family: 'Bitter', serif;
+}
+
+.username {
+  font-family: 'Marck Script', cursive;
+}
+
+footer {
+  font-family: 'Bitter', serif;
+  font-size: 10px;
+  position: absolute;
+    /* left: 0; */
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+}
+
+.collapse {
+  visibility: visible;
+}
+
+
+.navbar[_ngcontent-c0] > .container[_ngcontent-c0], .navbar[_ngcontent-c0] > .container-fluid[_ngcontent-c0] {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* width: 30vh; */
+}
