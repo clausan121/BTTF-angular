@@ -90,7 +90,7 @@ baseUrl: string = environment.apiUri;
   }
   removeComment(moviesId) {
     console.log('data to send: ', moviesId.moviesId);
-    return this.http.post(`${this.baseUrl}/api/cart/${prodId.prodId}/delete`, prodId, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/api/cart/${moviesId.prodId}/delete`, moviesId, { withCredentials: true })
     .map(res => {
       console.log('commentsssss: ', res);
        res.json();
